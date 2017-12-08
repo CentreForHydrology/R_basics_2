@@ -233,7 +233,7 @@ Avoiding loops
 ifelse
 ========================================================
 ```{r, eval=FALSE}
-if(test, true_val, false_val)
+ifelse(test, true_val, false_val)
 ```
 - applies test to each element in a variable and returns either the true or false value
 
