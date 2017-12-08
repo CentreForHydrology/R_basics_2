@@ -10,10 +10,6 @@ author: Kevin Shook
 date: 
 autosize: true
 
-This week's files
-========================================================
-- in https://github.com/CentreForHydrology/R_basics_2
-
 Automating your work
 ========================================================
 - Using scripts, you can do more work in less time
@@ -21,7 +17,7 @@ Automating your work
 
 Organizing your R code
 ========================================================
-![](Harder_R_lunch _talk.png)
+![](/home/kevin/data/projects/R_training/R_basics_2/Harder_R_lunch_talk.png)
 
 
 Projects
@@ -61,7 +57,7 @@ Example #1
 - Press **[Ctrl][Enter]** to step through the code one line at a time
 - Now check ```Source on Save```
 <div align="left">
-<img src="source_save.png" width=400>
+<img src="/home/kevin/data/projects/R_training/R_basics_2/source_save.png" width=400>
 </div>
   - click on the save icon
 - What happened?
@@ -153,7 +149,7 @@ x
 ```
 
 ```
-[1] 0.7923146 0.8011270 0.1325728 0.1306440 0.4553142
+[1] 0.1869312 0.1652235 0.3503043 0.3726916 0.0134019
 ```
 
 ```r
@@ -161,11 +157,12 @@ cv(x)
 ```
 
 ```
-[1] 0.7192885
+[1] 0.6775812
 ```
 
 Loading a function file
 ========================================================
+class: small-code
 
 ```r
 source('Example2.R')
@@ -218,7 +215,7 @@ Debugger
     
 Debugging
 ========================================================
-![](debugger.png)
+![](/home/kevin/data/projects/R_training/R_basics_2/debugger.png)
 
 Complex statements
 ========================================================
@@ -294,7 +291,7 @@ x
 ```
 
 ```
-[1] 0.7923146 0.8011270 0.1325728 0.1306440 0.4553142
+[1] 0.1869312 0.1652235 0.3503043 0.3726916 0.0134019
 ```
 
 ```r
@@ -303,7 +300,7 @@ cumulative
 ```
 
 ```
-[1] 0.7923146 1.5934416 1.7260144 1.8566584 2.3119726
+[1] 0.1869312 0.3521547 0.7024589 1.0751506 1.0885525
 ```
 
 ```r
@@ -311,7 +308,7 @@ diff(cumulative)
 ```
 
 ```
-[1] 0.8011270 0.1325728 0.1306440 0.4553142
+[1] 0.1652235 0.3503043 0.3726916 0.0134019
 ```
 
 
@@ -367,7 +364,7 @@ system.time({Saskatoon$satVP <- sapply(Saskatoon$t.1, saturatedVP)})
 
 ```
    user  system elapsed 
-  0.408   0.004   0.413 
+  0.396   0.012   0.405 
 ```
 
 Mixed language programming
@@ -413,3 +410,23 @@ Summary
 - Eventually you will build up a library of frequenty-used functions
 - We will be seeing how to combine your code with outputs, graphs and images
   - produces very reproducible research 
+  
+
+Questions/answers
+========================================================
+- Bulk downloading data from EC?
+  - check out `downloadMSCobs` in package `MSCr`
+- Several box-plots in one plot?
+  - check out `facet_grid` or `facet_wrap` in package `ggplot2` 
+- Navigating a directory tree?
+  - check out `list.files(recursive=TRUE)`
+  
+Questions/answers cont'd
+========================================================
+- Huge data structures?
+  - check out https://www.r-bloggers.com/five-ways-to-handle-big-data-in-r/
+- GUI for data QA/QC
+  - can build web apps using package `shiny`
+  - **R** is not the right program for complex GUI applications
+  - GUI applications in other languages can call **R** code
+  

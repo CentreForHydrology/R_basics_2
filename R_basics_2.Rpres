@@ -10,10 +10,6 @@ author: Kevin Shook
 date: 
 autosize: true
 
-This week's files
-========================================================
-- in https://github.com/CentreForHydrology/R_basics_2
-
 Automating your work
 ========================================================
 - Using scripts, you can do more work in less time
@@ -21,7 +17,7 @@ Automating your work
 
 Organizing your R code
 ========================================================
-![](Harder_R_lunch _talk.png)
+![](Harder_R_lunch_talk.png)
 
 
 Projects
@@ -151,6 +147,7 @@ cv(x)
 
 Loading a function file
 ========================================================
+class: small-code
 ```{r}
 source('Example2.R')
 saturatedVP
@@ -326,3 +323,23 @@ Summary
 - Eventually you will build up a library of frequenty-used functions
 - We will be seeing how to combine your code with outputs, graphs and images
   - produces very reproducible research 
+  
+
+Questions/answers
+========================================================
+- Bulk downloading data from EC?
+  - check out `downloadMSCobs` in package `MSCr`
+- Several box-plots in one plot?
+  - check out `facet_grid` or `facet_wrap` in package `ggplot2` 
+- Navigating a directory tree?
+  - check out `list.files(recursive=TRUE)`
+  
+Questions/answers cont'd
+========================================================
+- Huge data structures?
+  - check out https://www.r-bloggers.com/five-ways-to-handle-big-data-in-r/
+- GUI for data QA/QC
+  - can build web apps using package `shiny`
+  - **R** is not the right program for complex GUI applications
+  - GUI applications in other languages can call **R** code
+  
